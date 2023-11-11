@@ -79,14 +79,14 @@
         {
             RunWithTimeout(
                 () => ThirdParty.DisableDevice.DeviceHelper.SetDeviceEnabled(deviceInfo.ClassGuid, deviceInfo.DeviceId, false),
-                TimeSpan.FromSeconds(50));
+                TimeSpan.FromSeconds(10));
         }
 
         public static void EnableDevice(DeviceInfo deviceInfo)
         {
             RunWithTimeout(
                 () => ThirdParty.DisableDevice.DeviceHelper.SetDeviceEnabled(deviceInfo.ClassGuid, deviceInfo.DeviceId, true),
-                TimeSpan.FromSeconds(50));
+                TimeSpan.FromSeconds(10));
         }
 
         public static bool? IsDeviceCurrentlyDisabled(DeviceInfo deviceInfo)

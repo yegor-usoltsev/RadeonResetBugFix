@@ -25,7 +25,7 @@
             this.LogMessage($"Creating log directory ({Constants.LogDirectory})");
             Directory.CreateDirectory(Constants.LogDirectory);
 
-            this.LogMessage("Preventing Windows from killing services that take up to 300 seconds to shutdown");
+            this.LogMessage("Preventing Windows from killing services that take up to 60 seconds to shutdown");
             RegistryHelper.SetWaitToKillServiceTimeout((int)Constants.ServiceTimeout.TotalMilliseconds);
 
             this.LogMessage("Disabling fast reboot");

@@ -36,7 +36,7 @@
                             }
 
                             logger.Log($"Waiting for service {serviceDescription} to start");
-                            service.WaitForStatus(ServiceControllerStatus.Running, TimeSpan.FromSeconds(30));
+                            service.WaitForStatus(ServiceControllerStatus.Running, TimeSpan.FromSeconds(6));
                             if (service.Status == ServiceControllerStatus.Running)
                             {
                                 logger.Log($"Service is running");
@@ -66,7 +66,7 @@
                             }
 
                             logger.Log($"Waiting for service {serviceDescription} to stop");
-                            service.WaitForStatus(ServiceControllerStatus.Stopped, TimeSpan.FromSeconds(15));
+                            service.WaitForStatus(ServiceControllerStatus.Stopped, TimeSpan.FromSeconds(3));
                             if (service.Status == ServiceControllerStatus.Stopped)
                             {
                                 logger.Log($"Service is stopped");
